@@ -16,20 +16,23 @@
 
 package com.jiawa.train.member.controller;
 
-import org.springframework.stereotype.Controller;
+import com.jiawa.train.member.service.MemberService;
+import jakarta.annotation.Resource;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 
-@Controller
-public class TestController {
+@RestController
+@RequestMapping("/member")
+public class MemberController {
 
-    // http://127.0.0.1:8080/hello?name=lisi
-    @RequestMapping("/hello")
-    @ResponseBody
-    public String hello(@RequestParam(name = "name", defaultValue = "unknown user") String name) {
-        return "Hello " + name;
+    @Resource
+    private MemberService memberService;
+
+    @GetMapping("/count")
+    public int count() {
+        return memberService.count();
     }
 
 }
