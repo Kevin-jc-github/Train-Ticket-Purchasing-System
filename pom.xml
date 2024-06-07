@@ -56,6 +56,13 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-resolver-dns-native-macos</artifactId>
+                <version>4.1.94.Final</version>
+                <classifier>osx-x86_64</classifier>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
