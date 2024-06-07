@@ -24,4 +24,5 @@ public enum BusinessExceptionEnum {
                 "desc='" + desc + '\'' +
                 "} " + super.toString();
     }
+
 }
