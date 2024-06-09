@@ -42,7 +42,6 @@ public class PassengerService {
             passenger.setUpdateTime(now);
             passengerMapper.updateByPrimaryKey(passenger);
         }
-        passengerMapper.insert(passenger);
     }
 
     public PageResp<PassengerQueryResp> queryList(PassengerQueryReq req) {
