@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class ServerGenerator {
+    static boolean readOnly = false;
+    static String vuePath = "web" + File.separator + "src" + File.separator + "views"  + File.separator + "main" + File.separator;
     static String serverPath = "[module]" + File.separator + "src" + File.separator + "main" + File.separator + "java" + File.separator + "com" + File.separator + "jiawa" + File.separator + "train" + File.separator + "[module]" + File.separator;
     static String pomPath = "generator" + File.separator + "pom.xml";
     static {
@@ -70,13 +72,15 @@ public class ServerGenerator {
         param.put("tableNameCn", tableNameCn);
         param.put("fieldList", fieldList);
         param.put("typeSet", typeSet);
+        param.put("readOnly", readOnly);
         System.out.println("组装参数：" + param);
 
         // gen(Domain, param, "service", "service");
         // gen(Domain, param, "controller", "controller");
         // gen(Domain, param, "req", "saveReq");
-        gen(Domain, param, "req", "queryReq");
-        gen(Domain, param, "resp", "queryResp");
+        // gen(Domain, param, "req", "queryReq");
+        // gen(Domain, param, "resp", "queryResp");
+        genVue(do_main, param);
     }
 
     private static void gen(String Domain, Map<String, Object> param, String packageName, String target) throws IOException, TemplateException {
@@ -98,6 +102,14 @@ public class ServerGenerator {
         Node node = document.selectSingleNode("//pom:configurationFile");
         System.out.println(node.getText());
         return node.getText();
+    }
+
+    private static void genVue(String do_main, Map<String, Object> param) throws IOException, TemplateException {
+        FreemarkerUtil.initConfig("vue.ftl");
+        new File(vuePath).mkdirs();
+        String fileName = vuePath + do_main + ".vue";
+        System.out.println("开始生成：" + fileName);
+        FreemarkerUtil.generator(fileName, param);
     }
 
     /**
