@@ -27,3 +27,9 @@ Accept: application/json
 token: {{token}}
 
 ###
+
+DELETE http://localhost:8000/member/passenger/delete/1799666433442058240
+Accept: application/json
+token: {{token}}
+
+###
