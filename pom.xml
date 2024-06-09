@@ -63,6 +63,11 @@
                 <version>4.1.94.Final</version>
                 <classifier>osx-x86_64</classifier>
             </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.94.Final</version>
+            </dependency>
 
             <!-- 集成mybatis-->
             <dependency>
