@@ -28,7 +28,12 @@
            ok-text="确认" cancel-text="取消">
     <a-form :model="trainStation" :label-col="{span: 4}" :wrapper-col="{ span: 20 }">
       <a-form-item label="车次编号">
-        <a-input v-model:value="trainStation.trainCode" />
+        <a-select v-model:value="trainStation.trainCode" show-search
+                  :filterOption="filterTrainCodeOption">
+          <a-select-option v-for="item in trains" :key="item.code" :value="item.code" :label="item.code + item.start + item.end">
+            {{item.code}} | {{item.start}} ~ {{item.end}}
+          </a-select-option>
+        </a-select>
       </a-form-item>
       <a-form-item label="站序">
         <a-input v-model:value="trainStation.index" />
@@ -37,7 +42,7 @@
         <a-input v-model:value="trainStation.name" />
       </a-form-item>
       <a-form-item label="站名拼音">
-        <a-input v-model:value="trainStation.namePinyin" disabled />
+        <a-input v-model:value="trainStation.namePinyin" disabled/>
       </a-form-item>
       <a-form-item label="进站时间">
         <a-time-picker v-model:value="trainStation.inTime" valueFormat="HH:mm:ss" placeholder="请选择时间" />
@@ -56,7 +61,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted, watch } from 'vue';
+import {defineComponent, ref, onMounted, watch} from 'vue';
 import {notification} from "ant-design-vue";
 import axios from "axios";
 import {pinyin} from "pinyin-pro";
@@ -87,52 +92,51 @@ export default defineComponent({
     });
     let loading = ref(false);
     const columns = [
-    {
-      title: '车次编号',
-      dataIndex: 'trainCode',
-      key: 'trainCode',
-    },
-    {
-      title: '站序',
-      dataIndex: 'index',
-      key: 'index',
-    },
-    {
-      title: '站名',
-      dataIndex: 'name',
-      key: 'name',
-    },
-    {
-      title: '站名拼音',
-      dataIndex: 'namePinyin',
-      key: 'namePinyin',
-    },
-    {
-      title: '进站时间',
-      dataIndex: 'inTime',
-      key: 'inTime',
-    },
-    {
-      title: '出站时间',
-      dataIndex: 'outTime',
-      key: 'outTime',
-    },
-    {
-      title: '停站时长',
-      dataIndex: 'stopTime',
-      key: 'stopTime',
-    },
-    {
-      title: '里程（公里）',
-      dataIndex: 'km',
-      key: 'km',
-    },
-    {
-      title: '操作',
-      dataIndex: 'operation'
-    }
+      {
+        title: '车次编号',
+        dataIndex: 'trainCode',
+        key: 'trainCode',
+      },
+      {
+        title: '站序',
+        dataIndex: 'index',
+        key: 'index',
+      },
+      {
+        title: '站名',
+        dataIndex: 'name',
+        key: 'name',
+      },
+      {
+        title: '站名拼音',
+        dataIndex: 'namePinyin',
+        key: 'namePinyin',
+      },
+      {
+        title: '进站时间',
+        dataIndex: 'inTime',
+        key: 'inTime',
+      },
+      {
+        title: '出站时间',
+        dataIndex: 'outTime',
+        key: 'outTime',
+      },
+      {
+        title: '停站时长',
+        dataIndex: 'stopTime',
+        key: 'stopTime',
+      },
+      {
+        title: '里程（公里）',
+        dataIndex: 'km',
+        key: 'km',
+      },
+      {
+        title: '操作',
+        dataIndex: 'operation'
+      }
     ];
-
     watch(() => trainStation.value.name, ()=>{
       if (Tool.isNotEmpty(trainStation.value.name)) {
         trainStation.value.namePinyin = pinyin(trainStation.value.name, { toneType: 'none'}).replaceAll(" ", "");
@@ -217,15 +221,29 @@ export default defineComponent({
       });
     };
 
+    // ----------------- 车次下拉框 -----------------
+    const trains = ref([]);
+
+    /**
+     * 查询所有的车次，用于车次下拉框
+     */
     const queryTrainCode = () => {
       axios.get("/business/admin/train/query-all").then((response) => {
         let data = response.data;
         if (data.success) {
-          console.log(data.content);
+          trains.value = data.content;
         } else {
           notification.error({description: data.message});
         }
       });
+    };
+
+    /**
+     * 车次下拉框筛选
+     */
+    const filterTrainCodeOption = (input, option) => {
+      console.log(input, option);
+      return option.label.toLowerCase().indexOf(input.toLowerCase()) >= 0;
     };
 
     onMounted(() => {
@@ -233,6 +251,7 @@ export default defineComponent({
         page: 1,
         size: pagination.value.pageSize
       });
+
       queryTrainCode();
     });
 
@@ -248,7 +267,9 @@ export default defineComponent({
       onAdd,
       handleOk,
       onEdit,
-      onDelete
+      onDelete,
+      filterTrainCodeOption,
+      trains
     };
   },
 });
