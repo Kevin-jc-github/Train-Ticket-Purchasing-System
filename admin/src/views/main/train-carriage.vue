@@ -35,7 +35,7 @@
            ok-text="确认" cancel-text="取消">
     <a-form :model="trainCarriage" :label-col="{span: 4}" :wrapper-col="{ span: 20 }">
       <a-form-item label="车次编号">
-        <a-input v-model:value="trainCarriage.trainCode" />
+        <train-select-view v-model="trainCarriage.trainCode"></train-select-view>
       </a-form-item>
       <a-form-item label="厢号">
         <a-input v-model:value="trainCarriage.index" />
