@@ -37,10 +37,8 @@ public class StationService {
         if (ObjectUtil.isNull(station.getId())) {
 
             // 保存之前，先校验唯一键是否存在
-            StationExample stationExample = new StationExample();
-            stationExample.createCriteria().andNameEqualTo(req.getName());
-            List<Station> list = stationMapper.selectByExample(stationExample);
-            if (CollUtil.isNotEmpty(list)) {
+            Station stationDB = selectByUnique(req.getName());
+            if (ObjectUtil.isNotEmpty(stationDB)) {
                 throw new BusinessException(BusinessExceptionEnum.BUSINESS_STATION_NAME_UNIQUE_ERROR);
             }
 
@@ -74,6 +72,17 @@ public class StationService {
         pageResp.setTotal(pageInfo.getTotal());
         pageResp.setList(list);
         return pageResp;
+    }
+
+    private Station selectByUnique(String name) {
+        StationExample stationExample = new StationExample();
+        stationExample.createCriteria().andNameEqualTo(name);
+        List<Station> list = stationMapper.selectByExample(stationExample);
+        if (CollUtil.isNotEmpty(list)) {
+            return list.get(0);
+        } else {
+            return null;
+        }
     }
 
     public void delete(Long id) {
