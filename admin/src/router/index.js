@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// <!--新增二级菜单-->
+
 const routes = [{
   path: '/',
   component: () => import('../views/main.vue'),
@@ -26,6 +26,12 @@ const routes = [{
     }, {
       path: 'train-seat',
       component: () => import('../views/main/base/train-seat.vue'),
+    }]
+  }, {
+    path: 'business/',
+    children: [{
+      path: 'daily-train',
+      component: () => import('../views/main/business/daily-train.vue'),
     }]
   }, {
     path: 'batch/',

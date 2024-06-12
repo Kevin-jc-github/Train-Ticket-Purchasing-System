@@ -1,9 +1,8 @@
-<!--新增二级菜单-->
 <template>
   <a-layout-sider width="200" style="background: #fff">
     <a-menu
         v-model:selectedKeys="selectedKeys"
-        :openKeys="['batch', 'base']"
+        :openKeys="['batch', 'base', 'business']"
         mode="inline"
         :style="{ height: '100%', borderRight: 0 }"
     >
@@ -17,16 +16,16 @@
           <user-outlined /> &nbsp; 关于
         </router-link>
       </a-menu-item>
-      <a-sub-menu key="batch">
+      <a-sub-menu key="business">
         <template #title>
           <span>
             <UnorderedListOutlined />
-            跑批管理
+            业务管理
           </span>
         </template>
-        <a-menu-item key="/batch/job">
-          <router-link to="/batch/job">
-            <MenuUnfoldOutlined /> &nbsp; 任务管理
+        <a-menu-item key="/business/daily-train">
+          <router-link to="/business/daily-train">
+            <user-outlined /> &nbsp; 每日车次
           </router-link>
         </a-menu-item>
       </a-sub-menu>
@@ -60,6 +59,19 @@
         <a-menu-item key="/base/train-seat">
           <router-link to="/base/train-seat">
             <user-outlined /> &nbsp; 火车座位
+          </router-link>
+        </a-menu-item>
+      </a-sub-menu>
+      <a-sub-menu key="batch">
+        <template #title>
+          <span>
+            <UnorderedListOutlined />
+            跑批管理
+          </span>
+        </template>
+        <a-menu-item key="/batch/job">
+          <router-link to="/batch/job">
+            <MenuUnfoldOutlined /> &nbsp; 任务管理
           </router-link>
         </a-menu-item>
       </a-sub-menu>
