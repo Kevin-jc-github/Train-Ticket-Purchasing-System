@@ -27,13 +27,13 @@ import java.util.List;
 @Service
 public class TrainSeatService {
 
-    @Resource
-    private TrainCarriageService trainCarriageService;
-
     private static final Logger LOG = LoggerFactory.getLogger(TrainSeatService.class);
 
     @Resource
     private TrainSeatMapper trainSeatMapper;
+
+    @Resource
+    private TrainCarriageService trainCarriageService;
 
     public void save(TrainSeatSaveReq req) {
         DateTime now = DateTime.now();
@@ -122,4 +122,13 @@ public class TrainSeatService {
             }
         }
     }
+
+    public List<TrainSeat> selectByTrainCode(String trainCode) {
+        TrainSeatExample trainSeatExample = new TrainSeatExample();
+        trainSeatExample.setOrderByClause("`id` asc");
+        TrainSeatExample.Criteria criteria = trainSeatExample.createCriteria();
+        criteria.andTrainCodeEqualTo(trainCode);
+        return trainSeatMapper.selectByExample(trainSeatExample);
+    }
 }
+
