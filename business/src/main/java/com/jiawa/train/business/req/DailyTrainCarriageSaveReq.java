@@ -1,10 +1,10 @@
 package com.jiawa.train.business.req;
 
-        import java.util.Date;
-        import com.fasterxml.jackson.annotation.JsonFormat;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
+import java.util.Date;
 
 public class DailyTrainCarriageSaveReq {
 
@@ -27,9 +27,9 @@ public class DailyTrainCarriageSaveReq {
     private String trainCode;
 
     /**
-    * 厢序
+    * 箱序
     */
-                @NotNull(message = "【厢序】不能为空")
+                @NotNull(message = "【箱序】不能为空")
     private Integer index;
 
     /**
@@ -41,7 +41,7 @@ public class DailyTrainCarriageSaveReq {
     /**
     * 座位数
     */
-                @NotNull(message = "【座位数】不能为空")
+//                @NotNull(message = "【座位数】不能为空")
     private Integer seatCount;
 
     /**
@@ -53,8 +53,8 @@ public class DailyTrainCarriageSaveReq {
     /**
     * 列数
     */
-                @NotNull(message = "【列数】不能为空")
-    private Integer columnCount;
+//                @NotNull(message = "【列数】不能为空")
+    private Integer colCount;
 
     /**
     * 新增时间
@@ -124,12 +124,12 @@ public class DailyTrainCarriageSaveReq {
     this.rowCount = rowCount;
     }
 
-    public Integer getColumnCount() {
-    return columnCount;
+    public Integer getColCount() {
+    return colCount;
     }
 
-    public void setColumnCount(Integer columnCount) {
-    this.columnCount = columnCount;
+    public void setColCount(Integer colCount) {
+    this.colCount = colCount;
     }
 
     public Date getCreateTime() {
@@ -161,7 +161,7 @@ sb.append("Hash = ").append(hashCode());
     sb.append(", seatType=").append(seatType);
     sb.append(", seatCount=").append(seatCount);
     sb.append(", rowCount=").append(rowCount);
-    sb.append(", columnCount=").append(columnCount);
+    sb.append(", colCount=").append(colCount);
     sb.append(", createTime=").append(createTime);
     sb.append(", updateTime=").append(updateTime);
 sb.append("]");
