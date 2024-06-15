@@ -226,3 +226,102 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2024-06-15 00:43:04.202 INFO  com.jiawa.train.member.service.PassengerService   :62   [32m1718437383655edh  [0;39m 总页数：1
 2024-06-15 00:43:04.204 INFO  com.jiawa.train.common.aspect.LogAspect           :85   [32m1718437383655edh  [0;39m 返回结果: {"content":{"list":[{"createTime":1717907506000,"id":1799660636137984000,"idCard":"450602200204230111","memberId":1799255465557889024,"name":"朱建璁","type":"2","updateTime":1717992043872}],"total":1},"success":true}
 2024-06-15 00:43:04.204 INFO  com.jiawa.train.common.aspect.LogAspect           :86   [32m1718437383655edh  [0;39m ------------- 结束 耗时：541 ms -------------
+2024-06-15 00:56:55.656 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m1718438215655uty  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 00:56:55.672 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m1718438215655uty  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:56:55.673 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m1718438215655uty  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:56:55.748 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m1718438215748674  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 00:56:55.749 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m1718438215748674  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:56:55.750 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m1718438215748674  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:57:27.610 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-06-15 00:57:27.673 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:27.674 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2024-06-15 00:57:27.677 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-06-15 00:57:27.685 WARN  org.apache.catalina.loader.WebappClassLoaderBase  :173  [32m                  [0;39m The web application [member] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.11/java.lang.Thread.run(Thread.java:842)
+2024-06-15 00:57:27.689 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:27.694 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:27.710 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2024-06-15 00:57:27.719 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2024-06-15 00:57:27.926 INFO  com.jiawa.train.member.config.MemberApplication   :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.11 with PID 35619 (/Users/jiancongzhu/Desktop/train/member/target/classes started by jiancongzhu in /Users/jiancongzhu/Desktop/train)
+2024-06-15 00:57:27.927 INFO  com.jiawa.train.member.config.MemberApplication   :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-06-15 00:57:28.142 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=8f64cb94-43c3-35d2-a8bd-2d80461507f1
+2024-06-15 00:57:28.240 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2024-06-15 00:57:28.240 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:28.240 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2024-06-15 00:57:28.241 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-06-15 00:57:28.263 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2024-06-15 00:57:28.263 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 334 ms
+2024-06-15 00:57:28.387 WARN  o.s.core.LocalVariableTableParameterNameDiscoverer:123  [32m                  [0;39m Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.github.pagehelper.autoconfigure.PageHelperStandardProperties
+2024-06-15 00:57:28.421 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-06-15 00:57:28.434 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:28.434 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2024-06-15 00:57:28.438 INFO  com.jiawa.train.member.config.MemberApplication   :57   [32m                  [0;39m Started MemberApplication in 0.56 seconds (process running for 5488.953)
+2024-06-15 00:57:28.439 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2024-06-15 00:57:28.439 INFO  com.jiawa.train.member.config.MemberApplication   :21   [32m                  [0;39m 启动成功
+2024-06-15 00:57:28.439 INFO  com.jiawa.train.member.config.MemberApplication   :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8001/member/hello
+2024-06-15 00:57:48.419 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-06-15 00:57:48.438 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:48.438 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2024-06-15 00:57:48.456 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:48.458 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Destroying ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:48.540 INFO  com.jiawa.train.member.config.MemberApplication   :51   [32m                  [0;39m Starting MemberApplication using Java 17.0.11 with PID 35619 (/Users/jiancongzhu/Desktop/train/member/target/classes started by jiancongzhu in /Users/jiancongzhu/Desktop/train)
+2024-06-15 00:57:48.541 INFO  com.jiawa.train.member.config.MemberApplication   :630  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2024-06-15 00:57:48.602 INFO  o.springframework.cloud.context.scope.GenericScope:282  [32m                  [0;39m BeanFactory id=8f64cb94-43c3-35d2-a8bd-2d80461507f1
+2024-06-15 00:57:48.648 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :114  [32m                  [0;39m Tomcat initialized with port(s): 8001 (http)
+2024-06-15 00:57:48.649 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:48.649 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2024-06-15 00:57:48.649 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-06-15 00:57:48.656 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2024-06-15 00:57:48.656 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :291  [32m                  [0;39m Root WebApplicationContext: initialization completed in 115 ms
+2024-06-15 00:57:48.802 WARN  o.s.core.LocalVariableTableParameterNameDiscoverer:123  [32m                  [0;39m Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.github.pagehelper.autoconfigure.PageHelperStandardProperties
+2024-06-15 00:57:48.878 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2024-06-15 00:57:48.894 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8001"]
+2024-06-15 00:57:48.896 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :226  [32m                  [0;39m Tomcat started on port(s): 8001 (http) with context path '/member'
+2024-06-15 00:57:48.900 INFO  com.jiawa.train.member.config.MemberApplication   :57   [32m                  [0;39m Started MemberApplication in 0.38 seconds (process running for 5509.415)
+2024-06-15 00:57:48.901 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2024-06-15 00:57:48.901 INFO  com.jiawa.train.member.config.MemberApplication   :21   [32m                  [0;39m 启动成功
+2024-06-15 00:57:48.901 INFO  com.jiawa.train.member.config.MemberApplication   :22   [32m                  [0;39m 地址: 	http://127.0.0.1:8001/member/hello
+2024-06-15 00:59:58.755 INFO  o.a.c.c.C.[Tomcat].[localhost].[/member]          :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-15 00:59:58.756 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2024-06-15 00:59:58.758 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2024-06-15 00:59:58.760 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m171843839875914r  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 00:59:58.762 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m171843839875914r  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:59:58.762 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m171843839875914r  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:59:58.764 INFO  com.jiawa.train.common.aspect.LogAspect           :49   [32m171843839875914r  [0;39m ------------- 开始 -------------
+2024-06-15 00:59:58.764 INFO  com.jiawa.train.common.aspect.LogAspect           :50   [32m171843839875914r  [0;39m 请求地址: http://127.0.0.1:8001/member/passenger/query-mine GET
+2024-06-15 00:59:58.764 INFO  com.jiawa.train.common.aspect.LogAspect           :51   [32m171843839875914r  [0;39m 类名方法: com.jiawa.train.member.controller.PassengerController.queryMine
+2024-06-15 00:59:58.764 INFO  com.jiawa.train.common.aspect.LogAspect           :52   [32m171843839875914r  [0;39m 远程地址: 127.0.0.1
+2024-06-15 00:59:58.765 INFO  com.jiawa.train.common.aspect.LogAspect           :73   [32m171843839875914r  [0;39m 请求参数: []
+2024-06-15 00:59:58.767 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m171843839875914r  [0;39m HikariPool-2 - Starting...
+2024-06-15 01:00:00.752 INFO  com.zaxxer.hikari.pool.HikariPool                 :565  [32m171843839875914r  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8693a67
+2024-06-15 01:00:00.753 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m171843839875914r  [0;39m HikariPool-2 - Start completed.
+2024-06-15 01:00:00.754 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m171843839875914r  [0;39m ==>  Preparing: select id, member_id, `name`, id_card, `type`, create_time, update_time from passenger WHERE ( member_id = ? ) order by name asc
+2024-06-15 01:00:00.754 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m171843839875914r  [0;39m ==> Parameters: 1799255465557889024(Long)
+2024-06-15 01:00:00.918 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m171843839875914r  [0;39m <==    Columns: id, member_id, name, id_card, type, create_time, update_time
+2024-06-15 01:00:00.920 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m171843839875914r  [0;39m <==        Row: 1799660636137984000, 1799255465557889024, 朱建璁, 450602200204230111, 2, 2024-06-09 12:31:46, 2024-06-10 12:00:43.872
+2024-06-15 01:00:00.921 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m171843839875914r  [0;39m <==      Total: 1
+2024-06-15 01:00:00.934 INFO  com.jiawa.train.common.aspect.LogAspect           :85   [32m171843839875914r  [0;39m 返回结果: {"content":[{"createTime":1717907506000,"id":1799660636137984000,"idCard":"450602200204230111","memberId":1799255465557889024,"name":"朱建璁","type":"2","updateTime":1717992043872}],"success":true}
+2024-06-15 01:00:00.934 INFO  com.jiawa.train.common.aspect.LogAspect           :86   [32m171843839875914r  [0;39m ------------- 结束 耗时：2170 ms -------------
+2024-06-15 01:00:02.839 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m17184384028392z3  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 01:00:02.847 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m17184384028392z3  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 01:00:02.848 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m17184384028392z3  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 01:00:02.851 INFO  com.jiawa.train.common.aspect.LogAspect           :49   [32m17184384028392z3  [0;39m ------------- 开始 -------------
+2024-06-15 01:00:02.851 INFO  com.jiawa.train.common.aspect.LogAspect           :50   [32m17184384028392z3  [0;39m 请求地址: http://127.0.0.1:8001/member/passenger/query-mine GET
+2024-06-15 01:00:02.852 INFO  com.jiawa.train.common.aspect.LogAspect           :51   [32m17184384028392z3  [0;39m 类名方法: com.jiawa.train.member.controller.PassengerController.queryMine
+2024-06-15 01:00:02.852 INFO  com.jiawa.train.common.aspect.LogAspect           :52   [32m17184384028392z3  [0;39m 远程地址: 127.0.0.1
+2024-06-15 01:00:02.852 INFO  com.jiawa.train.common.aspect.LogAspect           :73   [32m17184384028392z3  [0;39m 请求参数: []
+2024-06-15 01:00:03.020 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m17184384028392z3  [0;39m ==>  Preparing: select id, member_id, `name`, id_card, `type`, create_time, update_time from passenger WHERE ( member_id = ? ) order by name asc
+2024-06-15 01:00:03.021 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m17184384028392z3  [0;39m ==> Parameters: 1799255465557889024(Long)
+2024-06-15 01:00:03.184 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m17184384028392z3  [0;39m <==    Columns: id, member_id, name, id_card, type, create_time, update_time
+2024-06-15 01:00:03.184 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m17184384028392z3  [0;39m <==        Row: 1799660636137984000, 1799255465557889024, 朱建璁, 450602200204230111, 2, 2024-06-09 12:31:46, 2024-06-10 12:00:43.872
+2024-06-15 01:00:03.186 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m17184384028392z3  [0;39m <==      Total: 1
+2024-06-15 01:00:03.188 INFO  com.jiawa.train.common.aspect.LogAspect           :85   [32m17184384028392z3  [0;39m 返回结果: {"content":[{"createTime":1717907506000,"id":1799660636137984000,"idCard":"450602200204230111","memberId":1799255465557889024,"name":"朱建璁","type":"2","updateTime":1717992043872}],"success":true}
+2024-06-15 01:00:03.188 INFO  com.jiawa.train.common.aspect.LogAspect           :86   [32m17184384028392z3  [0;39m ------------- 结束 耗时：337 ms -------------
