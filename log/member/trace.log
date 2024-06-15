@@ -1,2 +1,228 @@
 2024-06-15 00:00:27.726 WARN  com.zaxxer.hikari.pool.HikariPool                 :804  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m25s945ms).
 2024-06-15 00:30:45.796 WARN  com.zaxxer.hikari.pool.HikariPool                 :804  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m8s543ms).
+2024-06-15 00:42:09.202 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m17184373291977al  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 00:42:09.271 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m17184373291977al  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:42:09.272 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m17184373291977al  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:42:09.366 INFO  com.jiawa.train.common.aspect.LogAspect           :49   [32m17184373291977al  [0;39m ------------- 开始 -------------
+2024-06-15 00:42:09.366 INFO  com.jiawa.train.common.aspect.LogAspect           :50   [32m17184373291977al  [0;39m 请求地址: http://127.0.0.1:8001/member/passenger/query-list GET
+2024-06-15 00:42:09.366 INFO  com.jiawa.train.common.aspect.LogAspect           :51   [32m17184373291977al  [0;39m 类名方法: com.jiawa.train.member.controller.PassengerController.queryList
+2024-06-15 00:42:09.367 INFO  com.jiawa.train.common.aspect.LogAspect           :52   [32m17184373291977al  [0;39m 远程地址: 127.0.0.1
+2024-06-15 00:42:09.382 INFO  com.jiawa.train.common.aspect.LogAspect           :73   [32m17184373291977al  [0;39m 请求参数: [{"page":1,"size":10}]
+2024-06-15 00:42:09.385 INFO  com.jiawa.train.member.service.PassengerService   :55   [32m17184373291977al  [0;39m 查询页码：1
+2024-06-15 00:42:09.385 INFO  com.jiawa.train.member.service.PassengerService   :56   [32m17184373291977al  [0;39m 每页条数：10
+2024-06-15 00:42:14.479 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373291977al  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7fb76602 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:19.488 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373291977al  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7025af64 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:24.497 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373291977al  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2896aa8c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:29.502 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373291977al  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@539976dc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:31.152 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m17184373511529j7  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 00:42:31.154 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m17184373511529j7  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:42:31.154 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m17184373511529j7  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:42:31.156 INFO  com.jiawa.train.common.aspect.LogAspect           :49   [32m17184373511529j7  [0;39m ------------- 开始 -------------
+2024-06-15 00:42:31.156 INFO  com.jiawa.train.common.aspect.LogAspect           :50   [32m17184373511529j7  [0;39m 请求地址: http://127.0.0.1:8001/member/passenger/query-list GET
+2024-06-15 00:42:31.157 INFO  com.jiawa.train.common.aspect.LogAspect           :51   [32m17184373511529j7  [0;39m 类名方法: com.jiawa.train.member.controller.PassengerController.queryList
+2024-06-15 00:42:31.157 INFO  com.jiawa.train.common.aspect.LogAspect           :52   [32m17184373511529j7  [0;39m 远程地址: 127.0.0.1
+2024-06-15 00:42:31.157 INFO  com.jiawa.train.common.aspect.LogAspect           :73   [32m17184373511529j7  [0;39m 请求参数: [{"page":1,"size":10}]
+2024-06-15 00:42:31.157 INFO  com.jiawa.train.member.service.PassengerService   :55   [32m17184373511529j7  [0;39m 查询页码：1
+2024-06-15 00:42:31.157 INFO  com.jiawa.train.member.service.PassengerService   :56   [32m17184373511529j7  [0;39m 每页条数：10
+2024-06-15 00:42:34.507 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373291977al  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8e646ea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:36.163 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373511529j7  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5f96a825 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:39.512 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373291977al  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4ba74fbc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:39.529 ERROR c.j.t.common.controller.ControllerExceptionHandler:29   [32m17184373291977al  [0;39m 系统异常：
+org.mybatis.spring.MyBatisSystemException: null
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy84.selectByExample(Unknown Source)
+	at com.jiawa.train.member.service.PassengerService.queryList(PassengerService.java:58)
+	at com.jiawa.train.member.controller.PassengerController.queryList(PassengerController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.jiawa.train.common.aspect.LogAspect.doAround(LogAspect.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:623)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at com.jiawa.train.member.controller.PassengerController$$SpringCGLIB$$0.queryList(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in file [/Users/jiancongzhu/Desktop/train/member/target/classes/mapper/PassengerMapper.xml]
+### The error may involve com.jiawa.train.member.mapper.PassengerMapper.selectByExample_COUNT
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 86 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:169)
+	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:197)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:140)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at jdk.proxy2/jdk.proxy2.$Proxy109.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 93 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30048ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	... 107 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2498)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:561)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:168)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:170)
+	... 112 common frames omitted
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2494)
+	... 115 common frames omitted
+2024-06-15 00:42:39.555 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :207  [32m17184373291977al  [0;39m Resolved [org.mybatis.spring.MyBatisSystemException]
+2024-06-15 00:42:41.168 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373511529j7  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d7beae2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:46.173 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373511529j7  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6e831601 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:51.178 WARN  com.zaxxer.hikari.pool.PoolBase                   :179  [32m17184373511529j7  [0;39m HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3fb9576a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2024-06-15 00:42:51.344 DEBUG c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :137  [32m17184373511529j7  [0;39m ==>  Preparing: SELECT count(0) FROM passenger WHERE (member_id = ?)
+2024-06-15 00:42:51.350 DEBUG c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :137  [32m17184373511529j7  [0;39m ==> Parameters: 1799255465557889024(Long)
+2024-06-15 00:42:51.527 TRACE c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :143  [32m17184373511529j7  [0;39m <==    Columns: count(0)
+2024-06-15 00:42:51.528 TRACE c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :143  [32m17184373511529j7  [0;39m <==        Row: 1
+2024-06-15 00:42:51.532 DEBUG c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :137  [32m17184373511529j7  [0;39m <==      Total: 1
+2024-06-15 00:42:51.543 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m17184373511529j7  [0;39m ==>  Preparing: select id, member_id, `name`, id_card, `type`, create_time, update_time from passenger WHERE ( member_id = ? ) order by id desc LIMIT ?
+2024-06-15 00:42:51.545 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m17184373511529j7  [0;39m ==> Parameters: 1799255465557889024(Long), 10(Integer)
+2024-06-15 00:42:51.716 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m17184373511529j7  [0;39m <==    Columns: id, member_id, name, id_card, type, create_time, update_time
+2024-06-15 00:42:51.724 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m17184373511529j7  [0;39m <==        Row: 1799660636137984000, 1799255465557889024, 朱建璁, 450602200204230111, 2, 2024-06-09 12:31:46, 2024-06-10 12:00:43.872
+2024-06-15 00:42:51.726 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m17184373511529j7  [0;39m <==      Total: 1
+2024-06-15 00:42:51.729 INFO  com.jiawa.train.member.service.PassengerService   :61   [32m17184373511529j7  [0;39m 总行数：1
+2024-06-15 00:42:51.730 INFO  com.jiawa.train.member.service.PassengerService   :62   [32m17184373511529j7  [0;39m 总页数：1
+2024-06-15 00:42:51.747 INFO  com.jiawa.train.common.aspect.LogAspect           :85   [32m17184373511529j7  [0;39m 返回结果: {"content":{"list":[{"createTime":1717907506000,"id":1799660636137984000,"idCard":"450602200204230111","memberId":1799255465557889024,"name":"朱建璁","type":"2","updateTime":1717992043872}],"total":1},"success":true}
+2024-06-15 00:42:51.747 INFO  com.jiawa.train.common.aspect.LogAspect           :86   [32m17184373511529j7  [0;39m ------------- 结束 耗时：20591 ms -------------
+2024-06-15 00:43:03.655 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:29   [32m1718437383655edh  [0;39m 获取会员登录token：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE3MTg0MzEzMjMsIm1vYmlsZSI6IjEzMDAwMDAwMDAwIiwiaWQiOjE3OTkyNTU0NjU1NTc4ODkwMjQsImV4cCI6MTcxODUxNzcyMywiaWF0IjoxNzE4NDMxMzIzfQ.ZPOBoRNO61GE6skvYDySX8pA97dhGr0QnMR304Nn6eU
+2024-06-15 00:43:03.659 INFO  com.jiawa.train.common.util.JwtUtil               :55   [32m1718437383655edh  [0;39m 根据token获取原始内容：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:43:03.660 INFO  c.jiawa.train.common.interceptor.MemberInterceptor:31   [32m1718437383655edh  [0;39m 当前登录会员：{"mobile":"13000000000","id":1799255465557889024}
+2024-06-15 00:43:03.663 INFO  com.jiawa.train.common.aspect.LogAspect           :49   [32m1718437383655edh  [0;39m ------------- 开始 -------------
+2024-06-15 00:43:03.664 INFO  com.jiawa.train.common.aspect.LogAspect           :50   [32m1718437383655edh  [0;39m 请求地址: http://127.0.0.1:8001/member/passenger/query-list GET
+2024-06-15 00:43:03.664 INFO  com.jiawa.train.common.aspect.LogAspect           :51   [32m1718437383655edh  [0;39m 类名方法: com.jiawa.train.member.controller.PassengerController.queryList
+2024-06-15 00:43:03.664 INFO  com.jiawa.train.common.aspect.LogAspect           :52   [32m1718437383655edh  [0;39m 远程地址: 127.0.0.1
+2024-06-15 00:43:03.665 INFO  com.jiawa.train.common.aspect.LogAspect           :73   [32m1718437383655edh  [0;39m 请求参数: [{"page":1,"size":10}]
+2024-06-15 00:43:03.665 INFO  com.jiawa.train.member.service.PassengerService   :55   [32m1718437383655edh  [0;39m 查询页码：1
+2024-06-15 00:43:03.665 INFO  com.jiawa.train.member.service.PassengerService   :56   [32m1718437383655edh  [0;39m 每页条数：10
+2024-06-15 00:43:03.845 DEBUG c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :137  [32m1718437383655edh  [0;39m ==>  Preparing: SELECT count(0) FROM passenger WHERE (member_id = ?)
+2024-06-15 00:43:03.846 DEBUG c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :137  [32m1718437383655edh  [0;39m ==> Parameters: 1799255465557889024(Long)
+2024-06-15 00:43:04.020 TRACE c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :143  [32m1718437383655edh  [0;39m <==    Columns: count(0)
+2024-06-15 00:43:04.020 TRACE c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :143  [32m1718437383655edh  [0;39m <==        Row: 1
+2024-06-15 00:43:04.022 DEBUG c.j.t.m.m.PassengerMapper.selectByExample_COUNT   :137  [32m1718437383655edh  [0;39m <==      Total: 1
+2024-06-15 00:43:04.024 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m1718437383655edh  [0;39m ==>  Preparing: select id, member_id, `name`, id_card, `type`, create_time, update_time from passenger WHERE ( member_id = ? ) order by id desc LIMIT ?
+2024-06-15 00:43:04.025 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m1718437383655edh  [0;39m ==> Parameters: 1799255465557889024(Long), 10(Integer)
+2024-06-15 00:43:04.195 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m1718437383655edh  [0;39m <==    Columns: id, member_id, name, id_card, type, create_time, update_time
+2024-06-15 00:43:04.199 TRACE c.j.t.m.mapper.PassengerMapper.selectByExample    :143  [32m1718437383655edh  [0;39m <==        Row: 1799660636137984000, 1799255465557889024, 朱建璁, 450602200204230111, 2, 2024-06-09 12:31:46, 2024-06-10 12:00:43.872
+2024-06-15 00:43:04.201 DEBUG c.j.t.m.mapper.PassengerMapper.selectByExample    :137  [32m1718437383655edh  [0;39m <==      Total: 1
+2024-06-15 00:43:04.202 INFO  com.jiawa.train.member.service.PassengerService   :61   [32m1718437383655edh  [0;39m 总行数：1
+2024-06-15 00:43:04.202 INFO  com.jiawa.train.member.service.PassengerService   :62   [32m1718437383655edh  [0;39m 总页数：1
+2024-06-15 00:43:04.204 INFO  com.jiawa.train.common.aspect.LogAspect           :85   [32m1718437383655edh  [0;39m 返回结果: {"content":{"list":[{"createTime":1717907506000,"id":1799660636137984000,"idCard":"450602200204230111","memberId":1799255465557889024,"name":"朱建璁","type":"2","updateTime":1717992043872}],"total":1},"success":true}
+2024-06-15 00:43:04.204 INFO  com.jiawa.train.common.aspect.LogAspect           :86   [32m1718437383655edh  [0;39m ------------- 结束 耗时：541 ms -------------
