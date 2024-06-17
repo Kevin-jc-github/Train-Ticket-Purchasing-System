@@ -10,7 +10,6 @@ create table `station` (
   unique key `name_unique` (`name`)
 ) engine=innodb default charset=utf8mb4 comment='车站';
 
-
 drop table if exists `train`;
 create table `train` (
   `id` bigint not null comment 'id',
@@ -98,7 +97,7 @@ create table `daily_train_station` (
   `id` bigint not null comment 'id',
   `date` date not null comment '日期',
   `train_code` varchar(20) not null comment '车次编号',
-  `index` int not null comment '站序',
+  `index` int not null comment '站序|第一站是0',
   `name` varchar(20) not null comment '站名',
   `name_pinyin` varchar(50) not null comment '站名拼音',
   `in_time` time comment '进站时间',
@@ -126,7 +125,7 @@ create table `daily_train_carriage` (
   `update_time` datetime(3) comment '修改时间',
   primary key (`id`),
   unique key `date_train_code_index_unique` (`date`, `train_code`, `index`)
-) engine=innodb default charset=utf8mb4 comment='每日车箱';
+) engine=innodb default charset=utf8mb4 comment='每日车厢';
 
 drop table if exists `daily_train_seat`;
 create table `daily_train_seat` (
@@ -187,3 +186,4 @@ create table `confirm_order` (
   primary key (`id`),
   index `date_train_code_index` (`date`, `train_code`)
 ) engine=innodb default charset=utf8mb4 comment='确认订单';
+
