@@ -2,12 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jiawa</groupId>
-    <artifactId>train</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>train</name>
-    <description>train</description>
     <modules>
         <module>member</module>
         <module>common</module>
@@ -16,12 +11,20 @@
         <module>business</module>
         <module>batch</module>
     </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.jiawa</groupId>
+    <artifactId>train</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>train</name>
+    <description>train</description>
     <properties>
         <java.version>17</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>3.0.0</spring-boot.version>
-        <spring-cloud.version>2022.0.0-RC2</spring-cloud.version>
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -29,14 +32,6 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -59,18 +54,6 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-resolver-dns-native-macos</artifactId>
-                <version>4.1.94.Final</version>
-                <classifier>osx-x86_64</classifier>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>4.1.94.Final</version>
-            </dependency>
-
             <!-- 集成mybatis-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -90,18 +73,18 @@
                 <version>1.4.6</version>
             </dependency>
 
+            <!-- spring cloud alibaba  https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E
+            https://github.com/alibaba/spring-cloud-alibaba/blob/2022.x/README-zh.md
+            -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2022.0.0.0-RC1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
 </project>
+
